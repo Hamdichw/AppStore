@@ -1,0 +1,7 @@
+.cont{
+
+    background-image: url('http://localhost:4200/assets/331068576_1560271164450152_3029237961440171627_n.jpg');
+    background-size: cover;
+    height: 800px;
+    overflow-y: hidden;
+}

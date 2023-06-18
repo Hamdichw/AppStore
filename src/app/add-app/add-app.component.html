@@ -1,0 +1,67 @@
+<div class="container-fluid">
+    <div class="row d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start ">
+        <div class="col-6 offset-3" style="padding-top: 20px;" >
+            <form [formGroup]="appform" (ngSubmit)="createapp(appform.value)" >
+                <div class="mb-3">
+                  <label for="app-name" class="form-label">APP Name</label>
+                  <input formControlName="name" type="text" class="form-control" id="app-name"
+                  [ngClass]="
+                  {'is-invalid' :appform.controls['name'].errors && appform.controls['name'].touched ,
+                    'is-valid' : !appform.controls['name'].errors
+                  }
+                   ">
+                  <div class="alert alert-danger" role="alert"
+                  *ngIf="appform.controls['name'].errors && appform.controls['name'].touched" >
+                  <span  *ngIf="appform.controls['name'].errors?.['required'] ">APP name is required</span>
+                  <span *ngIf="appform.controls['name'].errors?.['minlength'] "> APP name minLength</span>
+                  <span *ngIf="appform.controls['name'].errors?.['maxlength'] "> APP name maxLength</span>  
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="Url" class="form-label">Url</label>
+                  <input formControlName="Url" type="text" class="form-control" id="Url"
+                  [ngClass]="
+                  {'is-invalid' :appform.controls['Url'].errors && appform.controls['Url'].touched ,
+                    'is-valid' : !appform.controls['Url'].errors
+                  }
+                   ">
+                  <div class="alert alert-danger" role="alert"
+                  *ngIf="appform.controls['Url'].errors && appform.controls['Url'].touched" >
+                  <span  *ngIf="appform.controls['Url'].errors?.['required'] ">Url is required</span>
+                  <span *ngIf="appform.controls['Url'].errors?.['minlength'] "> Url name minLength</span>
+                  <span *ngIf="appform.controls['Url'].errors?.['maxlength'] "> Url name maxLength</span>  
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="app-desc" class="form-label">APP desc</label>
+                  <textarea formControlName="description" name="" id="app-desc" cols="5" rows="4" class="form-control"
+                  [ngClass]="
+                  {'is-invalid' :appform.controls['description'].errors && appform.controls['description'].touched ,
+                    'is-valid' : !appform.controls['description'].errors
+                  }"></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="app-image" class="form-label">APP image</label>
+                  <input formControlName="image" type="text" class="form-control" id="app-image"
+                  [ngClass]="
+                  {'is-invalid' :appform.controls['image'].errors && appform.controls['image'].touched ,
+                    'is-valid' : !appform.controls['image'].errors
+                  }
+                   ">
+                  <div class="alert alert-danger" role="alert"
+                  *ngIf="appform.controls['image'].errors && appform.controls['image'].touched" >
+                  <span  *ngIf="appform.controls['image'].errors?.['required'] ">APP image is required</span>
+                  <span *ngIf="appform.controls['image'].errors?.['minlength'] "> APP image minLength</span>
+                  <span *ngIf="appform.controls['image'].errors?.['maxlength'] "> APP image maxLength</span>  
+                  </div>
+                </div>
+                <div class="bts">
+                <button type="submit"class="btn btn-primary"  >Create APP</button>
+                <button type="submit" class="btn btn-primary" (click)="backtohome()">back to home</button>
+              </div>
+              </form>
+
+        </div>
+    </div>
+    
+</div>

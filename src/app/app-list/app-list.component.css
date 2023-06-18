@@ -1,0 +1,49 @@
+.app {
+    display: inline-block;
+    margin: 25px; 
+    padding: 15px;
+    background-color: hsl(208, 100%, 97%,0.8);
+    border-radius: 5%;
+    float: left;
+}
+img{
+    width: 100px;
+    height: 100px;
+}
+.cover{
+height: 120px;
+width: 120px;
+margin: auto;
+transition: all 0.8s;
+}
+.cover:hover{
+    transform: scale(1.2);
+}
+.desc
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100px;
+    overflow-y:scroll ;
+}
+.actions{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.btn{
+    border-radius: 10%;
+    padding:  10px 15px;
+    margin:10px 30px ;
+}
+.add{
+    display: inline-block;
+    margin: 25px; 
+    padding: 15px;
+    background-color: hsl(208, 100%, 97%,0.8);
+    border-radius: 5%;
+    height: 338.5px;
+    width: 200px;
+}

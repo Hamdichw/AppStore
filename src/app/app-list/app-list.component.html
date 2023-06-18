@@ -1,0 +1,25 @@
+<div class="apps">
+    <!-- <div class="top">
+      <h4>ALL APPS</h4>
+    </div> -->
+    <div class="APP-thumbnail">
+      <div class="app" *ngFor="let app of apps">
+        <div class="cover" >
+          <img [src]="app.app_image" alt="" />
+        </div>
+        <div class="detail" style="width: 200px; ">
+         <h5>{{app.app_name}}</h5>   
+        <span class="desc">{{app.app_desc}}</span>
+        </div>
+        <div class="actions">
+            <button class="btn btn-outline-info"   (click)="update(this.app)"><span>  edit </span></button>
+            <button class=" btn btn-outline-danger" (click)="delete(this.app.idapplication)">
+              <span>delete</span>
+              </button>
+        </div>
+      
+    </div>
+  
+  </div>
+  
+</div>

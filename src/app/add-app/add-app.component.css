@@ -1,0 +1,18 @@
+.container-fluid{
+    background-image: url('http://localhost:4200/assets/331068576_1560271164450152_3029237961440171627_n.jpg');
+    background-size: cover;
+    height: 100vh;
+    padding: 120px;
+}
+.col-6{
+    background-color: aliceblue;
+    padding: 30px;
+    opacity: 0.8;
+    margin: auto;
+    border-radius: 5%;
+}
+
+.bts{
+    display: flex;
+    justify-content: space-around;
+}
